@@ -1,0 +1,89 @@
+body {
+    background-color:  rgb(223, 168, 228);
+    text-align: center;
+    color:  black;
+}
+/* تنسيق معرض الصور */
+#image-gallery {
+    text-align: center;
+    margin-top: 20px;
+}
+.image-container {
+    display: none;
+}
+.image-container.active {
+    display: block;
+
+}
+.image-container img {
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+/* تنسيق الصور والأسهم */
+.image-and-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container {
+    flex: 1;
+    margin: 10px;
+}
+.controls {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+.controls button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+/* إطار حول النص مع تغيير نمط الخط */
+.text-frame {
+    border: 7px solid  rgb(249, 224, 255);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 2%;
+}
+/* تنسيق العنوان الجديد */
+.new-title {
+    background-color:  rgb(249, 224, 255);
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+/* تنسيق النص والزر تحت الصور */
+.image-details {
+    margin-top: 10px;
+    text-align: center;
+    color:black;
+}
+
+.image-details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.image-details a.btn {
+    font-size: 18px;
+    background-color: rgb(249, 224, 255);
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.image-details a.btn:hover {
+    background-color: #ff4136;
+}
+
+
+
+

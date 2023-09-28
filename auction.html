@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="auction.css">
+ 
+</head>
+<body>
+    <!-- شريط التنقل (Navbar) هنا -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">MARAH SALAH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="breif.html">Main Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- النص داخل الإطار -->
+    <div id="project-summary" style="text-align: center; margin-top: 20px;">
+        <div class="text-frame">
+            <h2 style="color: #001f3f;">About Project</h2>
+            <p style="font-size: 18px; color: #001f3f; line-height: 1.6;">
+                The auction consists of a seller and a buyer. The seller displays the product to be sold, <br>
+                an ad is added according to certain conditions, <br>and then it is added to the ads page.<br>
+                Then the buyer browses all ads and searches for the right one for him <br> and then subscribes to it. 
+                <br>Inside the auction there are bids where each buyer who participates in the advertised<br> auction adds a certain value to the 
+                specified price of the item and at the end of time or when the seller stops advertising <br>
+                it will be sold to the final buyer who added the last new value to the item.
+            </p>
+        </div>
+    </div>
+
+    <!-- العنوان الجديد -->
+    <div class="new-title">
+        Image Gallery
+    </div>
+
+    <!-- الصور والأسهم -->
+    <div id="image-gallery" class="container text-center mt-4">
+        <div class="image-and-arrows">
+            <!-- زر التنقل السابق -->
+            <button id="prevBtn">&#10094;</button>
+            <!-- الصور -->
+            <div class="image-container active">
+                <img src="images/logo2.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="images/work 1.jpg" alt="Image 2">
+            </div>
+            <div class="image-container">
+                <img src="images/work2.jpg" alt="Image 3">
+            </div>
+            <div class="image-container">
+                <img src="images/work3.jpg" alt="Image 4">
+            </div>
+            <div class="image-container">
+                <img src="images/work4.jpg" alt="Image 5">
+            </div>
+            <div class="image-container">
+                <img src="images/work5.jpg" alt="Image 6">
+            </div>
+            <div class="image-container">
+                <img src="images/work 6.jpg" alt="Image 7">
+            </div>
+            <!-- زر التنقل التالي -->
+            <button id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- النص والزر تحت الصور -->
+    <div class="image-details">
+        <p><h3>For more details, please contact me.</h3></p>
+        <a class="btn btn-primary" href="breif.html#contact">Contact</a>
+    </div>
+
+    <script>
+        let currentImageIndex = 0;
+        const imageContainers = document.querySelectorAll('.image-container');
+
+        // إظهار الصورة الأولى
+        imageContainers[currentImageIndex].classList.add('active');
+
+        // زر التنقل للصورة التالية
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            imageContainers[currentImageIndex].classList.remove('active'); // إخفاء الصورة الحالية
+            currentImageIndex++; // زيادة مؤشر الصورة
+            if (currentImageIndex >= imageContainers.length) {
+                currentImageIndex = 0; // الانتقال إلى الصورة الأولى عندما نصل إلى الصورة الأخيرة
+            }
+            imageContainers[currentImageIndex].classList.add('active'); // إظهار الصورة الجديدة
+        });
+
+        // زر التنقل للصورة السابقة
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            imageContainers[currentImageIndex].classList.remove('active'); // إخفاء الصورة الحالية
+            currentImageIndex--; // تقليل مؤشر الصورة
+            if (currentImageIndex < 0) {
+                currentImageIndex = imageContainers.length - 1; // الانتقال إلى الصورة الأخيرة عندما نكون في الصورة الأولى
+            }
+            imageContainers[currentImageIndex].classList.add('active'); // إظهار الصورة الجديدة
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+     
+    <footer class="footer py-0"  >
+        <footer style="background-color:rgb(249, 224, 255);text-align: start;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Information</h5>
+                    <p>Email: <a href="mailto:marahsalah9@gmail.com">marahsalah9@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+962780087865">+962780087865</a></p>
+                    <a href="https://www.linkedin.com/in/marah-salah-5aa3b6237" target="_blank">
+                        <img src="images/linkedin.png" alt="LinkedIn" width="50" height="50">
+                    </a>
+                    <a href="https://github.com/MarahSalah" target="_blank">
+                        <img src="images/github.png" alt="GitHub" width="50" height="50">
+                    </a>
+                </div>
+        
+            </div>
+      
+    
+        <div class="container text-center text-align:center" >
+            <p>&copy; <span id="currentYear"></span> MARAH SALAH. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+ 
+
+</div>
+</body>
+</html>

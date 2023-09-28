@@ -1,0 +1,153 @@
+
+/* الستايلات */
+
+    body, html {
+margin: 0; /* إزالة الهوامش من الجهتين اليمين والشمال */
+padding: 0; /* إزالة الهوامش الداخلية */
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+background-color: rgb(223, 168, 228);
+color:black;
+scroll-behavior: smooth;
+}
+
+
+.navbar {
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    color:black;
+    z-index: 1000;
+}
+
+
+
+.navbar-light .navbar-toggler-icon {
+    background-color:black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:black;
+}
+.background-image {
+background-image: url("images/1.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: center top;
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: right;
+align-items: center;
+opacity: 0.8;
+margin: 0% 0% 0%; /* إزالة الهوامش من الجهتين اليمين والشمال */
+padding: 0; /* إزالة الهوامش الداخلية */
+overflow: hidden; /* إزالة التمدد الأفقي للصفحة */
+
+}
+.name-box {
+    background-color:rgb(223, 168, 228);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom:  30px;
+    margin-left: 12% ;
+    
+}
+
+#projects {
+    font-size: 24px;
+    padding: 0px 0;
+    margin-left: 5px;
+    margin-right: 12px;
+    width: 100%;
+}
+
+
+
+.project-card {
+    background-color:rgb(223, 168, 228);
+    color: rgb(249, 224, 255);
+    margin-bottom: 20px;
+    
+    transition: transform 0.3s ease-in-out, 
+    box-shadow 0.3s ease-in-out;
+}
+
+
+
+
+.project-card:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#education-experience {
+
+font-size: 24px;
+width: 100%;
+color:rgb(0, 0, 0);
+margin-left: 15px;
+border-radius: 1%;
+margin-right:90px;
+
+   
+}
+
+.section-box {
+    background-color:rgb(224, 204, 226);
+    color:black;
+    font-style: bold;
+    width: 100%; /* زيادة العرض إلى 80% هنا */
+    margin-left:5px;
+    margin-right:100px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#skills {
+    font-size: 24px;
+    padding: 50px 0;
+   
+    margin-left: 3px;
+    margin-right: 5px; /* زيادة الهامش من اليمين لقسم الـ skills */
+}
+
+.skills-box {
+    background-color:   rgb(224, 204, 226);
+    width: 100%;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-left: 3px;
+    margin-right: 5px; /* زيادة الهامش من اليمين لقسم الـ skills */
+}
+
+#contact {
+    background-color: rgb(224, 204, 226);
+    font-size: 24px;
+    padding: 50px 0;
+    margin-left: 3px;
+    margin-right: 5px; /* زيادة الهامش من اليمين لقسم الـ contact */
+}
+
+.contact-box {
+    background-color: rgb(224, 204, 226);
+    color:rgb(0, 0, 0);
+    width: 100%;
+    margin-left:3px;
+    margin-right: 5px; /* زيادة الهامش من اليمين لقسم الـ contact */
+    margin-bottom: 20px;
+}
+footer {
+    background-color: rgb(223, 168, 228);
+    color: white;
+    text-align: center;
+    padding: 0px; /* ارتفاع صغير لل footer */
+    bottom: 0;
+    width: 100%;
+    margin-right:0px;
+    margin-left:0px;
+
+}
+
